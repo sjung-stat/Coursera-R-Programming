@@ -1,1 +1,1 @@
-# This Course Covers How To Use R For Effective Data Analysis
+# Using R For Effective Data Analysis
