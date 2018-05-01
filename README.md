@@ -1,1 +1,1 @@
-# Course 2 of 10 in the Data Science Specialization
+# This Course Covers How To Use R For Effective Data Analysis
