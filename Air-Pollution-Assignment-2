@@ -19,7 +19,6 @@ complete <- function(directory, id=1:332) {
       ## number of complete cases
       
       pollution.files <- list.files(directory, full.names=T)
-      pollution.data <- c()
       nobs <- c()
       
       
