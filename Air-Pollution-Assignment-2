@@ -1,0 +1,35 @@
+# Air Pollution Assignment Part #2
+# Write a function that reads a directory full of files and reports the number of completely 
+# observed cases in each data file. 
+
+
+complete <- function(directory, id=1:332) {
+      
+      ## 'directory' is a character vector of length 1 indicating
+      ## the location of the CSV file
+      
+      ## 'id' is an integer vector indicating the monitor ID numbers 
+      ## to be used
+      
+      ## Return a data frame of the form:
+      ## id nobs
+      ## 1  117
+      ## 2  1041
+      ## ...
+      ## where 'id' is the monitor ID number and 'nobs' is the 
+      ## number of complete cases
+      
+      pollution.files <- list.files(directory, full.names=T)
+      pollution.data <- c()
+      nobs <- c()
+      
+      
+      for (i in id) {
+            temp.data <- read.csv(pollution.files[i], header=T)
+            withoutNA <- na.omit(temp.data)
+            temp.nobs <- nrow(withoutNA)
+            nobs <- c(nobs, temp.nobs)
+            results <- cbind(id, nobs)
+      }
+      print(results)
+}
